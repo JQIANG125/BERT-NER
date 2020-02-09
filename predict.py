@@ -9,7 +9,7 @@ with open ('/content/data.txt','a+') as file:
 
 for i in textlist:
 	labellist.append(model.predict(i))
-with open('/content/label.txt','a+') as label_file
+with open('/content/label.txt','a+') as label_file:
 	for i in labellist:
 		a=''
 		for j in i:
