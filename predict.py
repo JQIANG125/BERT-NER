@@ -5,7 +5,9 @@ textlist=[]
 labellist=[]
 with open ('/content/data.txt','a+') as file:
 	for i in file:
+		print(i)
 		textlist.append(i[0:-1])
+	print(textlist)
 
 for i in textlist:
 	word=model.predict(i)
