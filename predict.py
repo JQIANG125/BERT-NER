@@ -3,8 +3,10 @@ from bert import Ner
 model = Ner("/content/out")
 textlist=[]
 labellist=[]
-with open ('/content/data.txt','a+') as file:
+with open ('/content/data.txt') as file:
+	print(file)
 	for i in file:
+		print('????')
 		print(i)
 		textlist.append(i[0:-1])
 	print(textlist)
