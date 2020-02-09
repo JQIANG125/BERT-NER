@@ -8,7 +8,9 @@ with open ('/content/data.txt','a+') as file:
 		textlist.append(i[0:-1])
 
 for i in textlist:
-	labellist.append(model.predict(i))
+	word=model.predict(i)
+	print(word)
+	labellist.append(word)
 with open('/content/label.txt','a+') as label_file:
 	for i in labellist:
 		a=''
