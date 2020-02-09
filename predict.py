@@ -4,18 +4,14 @@ model = Ner("/content/out")
 textlist=[]
 labellist=[]
 with open ('/content/data.txt') as file:
-	print(file)
 	for i in file:
-		print('????')
-		print(i)
 		textlist.append(i[0:-1])
-	print(textlist)
 
 for i in textlist:
 	word=model.predict(i)
 	print(word)
 	labellist.append(word)
-with open('/content/label.txt','a+') as label_file:
+with open('/content/label.txt','w') as label_file:
 	for i in labellist:
 		a=''
 		for j in i:
